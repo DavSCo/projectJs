@@ -1,52 +1,75 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Casino</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-   <!-- <span class="symb1" id="symb1">
 
-    </span>
-    <span class="symb2">
+<div class="name">
 
-    </span>
-    <span class="symb3">
+</div>
 
-    </span>
-    <span class="symb4">
-
-    </span>
-
-    <button id="startbtn" type="button">Start</button>-->
-
-   <div class="roulette">
-
-       <div class="case1">
-
-       </div>
-       <div class="case2">
-
-       </div>
-       <div class="case3">
-
-       </div>
-       <div class="case4">
-
-       </div>
+<div class="roulette container">
 
 
-   </div>
+    <div class="row">
+        <div class="col-md-3 wrapper">
+            <div class="case1 case col-md-12 col-md-push-1">
 
-<button type="button" class="start">START</button>
+            </div>
+        </div>
 
-   <div class="credit">
+        <div class="wrapper col-md-3 ">
+            <div class="case2 case col-md-12 col-md-push-2">
 
-   </div>
+            </div>
+        </div>
+        <div class="wrapper col-md-3 ">
+            <div class="case3 case col-md-12 col-md-push-3">
+
+            </div>
+        </div>
+        <div class="wrapper col-md-3 ">
+            <div class="case4 case col-md-12 col-md-push-4">
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div id="coin">
+        <h2> 1 Credit</h2>
+</div>
+
+<button type="button" class="start" id="start"></button>
 
 
 
-   <script src="js/game.js"></script>
+
+<h3>Credit </h3>
+<div class="credit">
+<div class="creditnb">
+    <h4>20</h4>
+</div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+
+<script src="js/game.js"></script>
 </body>
 </html>
