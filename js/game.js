@@ -24,7 +24,12 @@ case2.innerHTML = "<img src='images/coeur.png'>" + "<img src='images/trefle.png'
 case3.innerHTML = "<img src='images/trefle.png'>" + "<img src='images/carreau.png'>" + "<img src='images/pique.png'>";
 case4.innerHTML = "<img src='images/carreau.png'>"+ "<img src='images/pique.png'>" + "<img src='images/coeur.png'>";
 
-
+$( document ).ready(function() {
+    var audio = $("#clickSound")[0];
+    $("#start").mousedown(function() {
+        audio.play();
+    });
+});
 
 
 // On crée l'action a réalsier au click du bouton
@@ -46,6 +51,8 @@ start.addEventListener('click',function () {
         var case3 = document.querySelector(".case3");
         var case4 = document.querySelector(".case4");
 
+        var historique = $(".historiquetexte ul");
+
         // On va générer 4 symboles aléatoirement du tableaux des symboles
         var symboles1 = symboles[Math.floor(Math.random() * symboles.length)];
         var symboles2 = symboles[Math.floor(Math.random() * symboles.length)];
@@ -60,21 +67,33 @@ start.addEventListener('click',function () {
 
 
 
-        $('.case').animate({top : -1800}, 500, "swing");
+        $('.case').animate({top : -2100}, 500, "swing");
 
         // Si les 4 symboles sont identiques le joueur gagne 5 credits
         if (symboles1 == symboles2 && symboles2 == symboles3 && symboles3 == symboles4) {
 
+            document.querySelector(".name").style.webkitAnimationName = "clignotename";
+
             credit += 5;
+
             scores += 1;
             console.log(" Vous avez gagnez 5 Credit !");
             console.log(scores);
+           // historique.innerHTML = "<p> + 5 Credits JACKPOT !";
+            historique.append("<li> +5 Credits ! </li>");
+
 
         }else {
+
+            document.querySelector(".name").style.webkitAnimationName = "none";
+
             scores += 0;
 
             console.log("Vous n'avez rien gagné ! Et vous avez perdu 1 credit");
             console.log(scores);
+
+            //historique.innerHTML = "<p> -1 Credit </p>";
+            historique.append("<li> -1 Credit </li>");
         }
 
 
